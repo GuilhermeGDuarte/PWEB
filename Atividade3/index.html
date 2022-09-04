@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atividade 3</title>
+
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            min-height: 46.5px;
+            background: linear-gradient(to right, #0066ff 6%, #ffff66 100%);
+            position: sticky;
+            top: 0;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a,
+        .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: rgb(0, 28, 131);
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://lh5.googleusercontent.com/8LM57X1PbfUQ9gm9piriB99WmYZwpGx74de_LtcwxKtvrPlw1LYDJequ_dEzEnDn5tw=w2400');
+            ;
+            height: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+    </style>
+
+</head>
+
+<body style="background-color: rgb(181, 223, 243);">
+    <div class="hero-image">
+        <p style="font-family: 'Arial Black'; text-align: center; color: aliceblue;">Autor: Guilherme Gomes Duarte RA:
+            0030482111026</p>
+
+        <h1
+            style="font-size: 50px; font-family: 'Arial Black'; text-align: center; color: seashell; text-shadow: 4px 4px black;">
+            PROGRAMAÇÃO PARA WEB: LINGUAGENS PARA BACK-END</h1>
+    </div>
+
+    <ul>
+        <strong>
+            <li><a class="active" href="#intr">Introdução</a></li>
+            <li><a href="#1">O que é back-end?</a></li>
+            <li><a href="#2">O que é um desenvolvedor back-end?</a></li>
+            <li class="dropdown"><a href="#3" class="dropbtn">Tipos de linguagem de programação</a>
+                <div class="dropdown-content">
+                    <a href="#31">Linguagem de programação de alto nível</a>
+                    <a href="#32">Linguagem de programação de nível intermediário</a>
+                    <a href="#33">Linguagem de programação de baixo nível</a>
+                </div>
+            </li>
+            <li class="dropdown"><a href="#4" class="dropbtn">Linguagens de programação para back-end</a>
+                <div class="dropdown-content">
+                    <a href="#41">Python</a>
+                    <a href="#42">Rails</a>
+                    <a href="#43">Java</a>
+                    <a href="#44">C#</a>
+                    <a href="#45">Swift</a>
+                    <a href="#46">PHP</a>
+                    <a href="#47">JavaScript</a>
+                    <a href="#48">Ruby</a>
+                    <a href="#49">C</a>
+                    <a href="#410">C++</a>
+                    <a href="#411">Assembly</a>
+                </div>
+            </li>
+            <li><a href="#conc">Conclusão</a></li>
+            <li><a href="#ref">Referências</a></li>
+        </strong>
+    </ul>
+
+    <p style="text-align: center; font-size: 35px; text-shadow: 1px 1px seashell;" id="intr"><strong>❋❋❋ Introdução
+            ❋❋❋</strong></p>
+
+    <p style="text-align: justify;">&emsp;Existem inúmeras linguagens de programação para back-end e, cada uma delas,
+        possui atributos e funcionalidades para algo específico. Nesse trabalho será abordado as principais linguagens
+        de programação para back-end, além de ter como objetivo a explicação de alguns conceitos básicos sobre o tema.
+    </p>
+
+    <br>
+
+    <strong>
+        <p style="font-size: 25px" id="1">1. O que é back-end?</p>
+    </strong>
+    <p style="text-align: justify;">&emsp;Back-end, como seu próprio nome sugere, é relacionado com o que tem por
+        trás de uma aplicação. Dessa maneira, ele trabalha em grande parte dos casos sendo o intermediário entre os
+        dados que vem de uma aplicação e/ou navegador rumo ao banco de dados e vice-versa, constantemente aplicando
+        as devidas regras de negócio, validações e garantias num ambiente restrito ao usuário final, isso é, onde
+        ele não consegue acessar ou manipular algo.
+    </p>
+
+    <figure><img
+            src="https://www.alura.com.br/artigos/assets/o-que-e-front-end-e-back-end/back-end-sincronizacao-banco-dados-navegadores.jpg"
+            class="center">
+        <figcaption style="text-align: center;">Fig.1 - Funcionamento do back-end
+            https://www.alura.com.br/artigos/o-que-e-front-end-e-back-end
+        </figcaption>
+    </figure>
+
+    <br>
+
+    <strong>
+        <p style="font-size: 25px" id="2">2. O que é um desenvolvedor back-end?</p>
+    </strong>
+    <p style="text-align: justify;">&emsp;O desenvolvedor back-end é o profissional que está envolvido diretamente com
+        as regras de negócios, segurança, banco de dados e integração de webservices. Dessa maneira, ele é o responsável
+        por implementar uma arquitetura robusta, que seja capaz de se comunicar com o banco de dados e garanta a
+        segurança das informações enviadas pelo usuário.
+    </p>
+    <p style="text-align: justify;">&emsp;Assim, é comum que pessoas desenvolvedoras de back-ends trabalharem com
+        ferramentas de linha de comando, sites (deixando o HTML dinâmico) e análise de dados. Isso é possível através da
+        utilização de diversas linguagens de programação, cuja algumas serão abordadas nesse trabalho.
+    </p>
+
+    <figure><img src="https://i0.wp.com/kenzie.com.br/blog/wp-content/uploads/2022/02/1.png?fit=640%2C336&ssl=1"
+            class="center">
+        <figcaption style="text-align: center;">Fig.2 - https://kenzie.com.br/blog/linguagens-de-programacao-backend/
+        </figcaption>
+    </figure>
+
+    <br>
+
+    <strong>
+        <p style="font-size: 25px" id="3">3. Tipos de linguagem de programação</p>
+    </strong>
+
+    <strong>
+        <p style="font-size: 20px" id="31">&ensp;3.1. Linguagem de programação de alto nível</p>
+    </strong>
+
+    <p style="text-align: justify;">&emsp;As linguagens de programação de alto nível são aquelas que possuem palavras
+        fáceis de serem compreendidas e implementadas, e então, são as que mais se aproximam da linguagem humana, com
+        sintaxe e semântica. Dessa maneira, elas conseguem criar, executar e gerenciar aplicativos modernos.
+    </p>
+
+    <strong>
+        <p style="font-size: 20px" id="32">&ensp;3.2. Linguagem de programação de nível intermediário</p>
+    </strong>
+
+    <p style="text-align: justify;">&emsp;As linguagens de programação de nível intermediário são aquelas que possuem
+        característica tanto das linguagens de alto nível quanto de baixo nível. Assim, elas possuem uma sintaxe de alto
+        nível, mas com direcionamentos que facilitam o trabalho do programador.
+    </p>
+
+    <strong>
+        <p style="font-size: 20px" id="33">&ensp;3.3. Linguagem de programação de baixo nível</p>
+    </strong>
+
+    <p style="text-align: justify;">&emsp;As linguagens de programação de baixo nível são aquelas que mais se aproximam
+        da linguagem da máquina (o hardware), assim, elas enviam instruções diretas ao processador e são constituídas de
+        sequências de 0 e 1, conhecido como código binário.
+    </p>
+
+    <br>
+
+    <strong>
+        <p style="font-size: 25px" id="4">4. Linguagens de programação para back-end</p>
+    </strong>
+
+    <p style="text-align: justify;">&emsp;Como mencionado anteriormente, existem várias linguagens para back-end, no
+        entanto, cada uma delas pode ser aplicada em um viés diferente. Por essa razão, é fundamental que as empresas
+        saibam identificar qual é o melhor back-end para o seu negócio.
+    </p>
+
+    <strong>
+        <p style="font-size: 20px" id="41">&ensp;4.1. Python</p>
+    </strong>
+
+    <figure><img src="https://www.richgarcia.com.br/wp-content/uploads/2021/10/python.png" class="center">
+        <figcaption style="text-align: center;">Fig.3 -
+            https://www.richgarcia.com.br/wp-content/uploads/2021/10/python.png
+        </figcaption>
+    </figure>
+
+    <p style="text-align: justify;">&emsp;Considerada umas das linguagens de programação que mais estão em alta, já que
+        a Python é considerada uma ótima linguagem para quem está iniciando o estudo em programação. Já que, como tem o
+        código aberto, é possibilitado o trabalho de uma maneira muito mais otimizada, integrada e eficaz. A Phyton é
+        muito utilizada para o desenvolvimento web e machine learning.
+    </p>
+
+    <strong>
+        <p style="font-size: 20px" id="42">&ensp;4.2. Rails</p>
+    </strong>
+
+    <figure><img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Ruby_On_Rails_Logo.svg/1200px-Ruby_On_Rails_Logo.svg.png"
+            class="center">
+        <figcaption style="text-align: center;">Fig.4 -
+            https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Ruby_On_Rails_Logo.svg/1200px-Ruby_On_Rails_Logo.svg.png
+        </figcaption>
+    </figure>
+
+    <p style="text-align: justify;">&emsp;Ruby on Rails, ou apenas Rails, é um framework muito utilizado no
+        desenvolvimento de aplicações web. Ele é basicamente uma coleção de bibliotecas escrita pela linguagem de
+        programação Ruby, portanto, o profissional que compreender a linguagem, tem mais condições de interpretar erros
+        e criar novas funções. Além disso, o Rails oferece facilidade no desenvolvimento de sites orientados a banco de
+        dados, é estável, possui escalabilidade, opções de automação de testes, é de fácil compreensão e ainda possui
+        várias ferramentas que ajudam a reduzir o tempo do desenvolvimento.
+    </p>
+
+    <strong>
+        <p style="font-size: 20px" id="43">&ensp;4.3. Java</p>
+    </strong>
+
+    <figure><img src="https://inforchannel.com.br/wp-content/uploads/2021/03/e2d2f80e-java-logo-1-1024x573.png"
+            class="center">
+        <figcaption style="text-align: center;">Fig.5 -
+            https://inforchannel.com.br/wp-content/uploads/2021/03/e2d2f80e-java-logo-1-1024x573.png
+        </figcaption>
+    </figure>
+
+    <p style="text-align: justify;">&emsp;Considerada uma das linguagens mais consagradas e populares do mundo, Java é
+        orientada a objetos, roda em várias plataformas e serve para desenvolver aplicações web e mobile. Diferente do
+        que ocorre em outras linguagens de programação, as aplicações criadas em Java não são compiladas em um código
+        nativo. Além disso, algumas das suas principais características são alta performance dos programas,
+        portabilidade, segurança e simplicidade.
+    </p>
+
+    <strong>
+        <p style="font-size: 20px" id="44">&ensp;4.4. C#</p>
+    </strong>
+
+    <figure><img
+            src="https://growiz.com.br/wp-content/uploads/2020/08/kisspng-c-programming-language-logo-microsoft-visual-stud-atlas-portfolio-5b899192d7c600.1628571115357423548838.png"
+            class="center">
+        <figcaption style="text-align: center;">Fig.6 -
+            https://growiz.com.br/wp-content/uploads/2020/08/kisspng-c-programming-language-logo-microsoft-visual-stud-atlas-portfolio-5b899192d7c600.1628571115357423548838.png
+        </figcaption>
+    </figure>
+
+    <p style="text-align: justify;">&emsp;Muito utilizada para a construção de jogos e aplicativos Windows para
+        celulares, C# é uma linguagem de programação de propósito geral, de sintaxe simples e de fácil aprendizagem. Ela
+        também trabalha com base em códigos compartilhados e é conhecida por executar o código de uma maneira mais ágil
+        quando comparada às outras linguagens.
+    </p>
+
+    <strong>
+        <p style="font-size: 20px" id="45">&ensp;4.5. Swift</p>
+    </strong>
+
+    <figure><img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Swift_logo.svg/2560px-Swift_logo.svg.png"
+            class="center">
+        <figcaption style="text-align: center;">Fig.7 -
+            https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Swift_logo.svg/2560px-Swift_logo.svg.png
+        </figcaption>
+    </figure>
+
+    <p style="text-align: justify;">&emsp;Conhecida como uma das linguagens oficiais do iOS, Swift é uma linguagem
+        rápida, escalável, segura e muito fácil de aprender. Ou seja, facilita a vida dos desenvolvedores que criam
+        aplicativos com menos codificação. Além do mais, foi desenvolvida com o intuito de incentivar as pessoas que têm
+        vontade de trabalhar nessa área, contribuindo com o aumento dos aplicativos Apple e facilitando a compreensão do
+        profissional que entra durante o andamento do projeto.
+    </p>
+
+    <strong>
+        <p style="font-size: 20px" id="46">&ensp;4.6. PHP</p>
+    </strong>
+
+    <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png"
+            class="center">
+        <figcaption style="text-align: center;">Fig.8 -
+            https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png
+        </figcaption>
+    </figure>
+
+    <p style="text-align: justify;">&emsp;PHP é uma das principais linguagens de programação do lado do servidor e é
+        conhecido por ser multifuncional e fácil de usar. Seu código é aberto e versátil e quase todos os sistemas
+        operacionais oferecem suporte a PHP. Com ele não há escassez de boas ferramentas para automação, implantação e
+        teste. Além disso, ele é capaz de suportar o processamento de um grande volume de dados.
+    </p>
+
+    <strong>
+        <p style="font-size: 20px" id="47">&ensp;4.7. JavaScript</p>
+    </strong>
+
+    <figure><img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png"
+            class="center">
+        <figcaption style="text-align: center;">Fig.9 -
+            https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png
+        </figcaption>
+    </figure>
+
+    <p style="text-align: justify;">&emsp;É uma linguagem que possibilita a criação de conteúdos mais dinâmicos e,
+        também, o controle de mídias para deixar a página mais interessante. Neste caso, você não precisa de um
+        compilador porque os navegadores de internet o interpretam com HTML. Com ele os erros são bem mais fáceis de
+        enxergar, e por conta disso, de serem corrigidos. Outro destaque dessa linguagem é que ela é totalmente
+        compatível com vários navegadores e plataformas. Além disso, ela é considerada mais rápida e mais leve que as
+        outras linguagens.
+    </p>
+
+    <strong>
+        <p style="font-size: 20px" id="48">&ensp;4.8. Ruby</p>
+    </strong>
+
+    <figure><img src="https://miro.medium.com/max/540/1*7e9D-oPWPIKBe2AQv862aA.png" class="center">
+        <figcaption style="text-align: center;">Fig.10 - https://miro.medium.com/max/540/1*7e9D-oPWPIKBe2AQv862aA.png
+        </figcaption>
+    </figure>
+
+    <p style="text-align: justify;">&emsp;Quando o assunto envolve prototipagem, a linguagem Ruby é a preferida pela
+        maioria dos desenvolvedores, afinal, ela oferece recursos orientados a objetos, flexíveis e escaláveis. De
+        sintaxe simples e de fácil compreensão, o Ruby também permite que partes da sua linguagem sejam alteradas.
+        Portanto, partes fundamentais da linguagem podem ser redefinidas ou removidas. Outro fator interessante é que os
+        desenvolvedores podem conferir as ferramentas de que precisam no Ruby, ou seja, raramente há a necessidade de
+        fazer referência à documentação externa e ele pode desenvolver códigos 40% mais rápido do que outras linguagens
+        de script.
+    </p>
+
+    <strong>
+        <p style="font-size: 20px" id="49">&ensp;4.9. C</p>
+    </strong>
+
+    <figure><img src="https://peritoemphp.com/wp-content/uploads/2019/02/letter_c_PNG22.png" class="center">
+        <figcaption style="text-align: center;">Fig.11 -
+            https://peritoemphp.com/wp-content/uploads/2019/02/letter_c_PNG22.png
+        </figcaption>
+    </figure>
+
+    <p style="text-align: justify;">&emsp;Considerada de propósito geral, a linguagem C pode ser implementada
+        praticamente em qualquer projeto. Com ela é possível criar aplicativos e sistemas operacionais de todos os
+        tipos. Além de ser uma linguagem totalmente flexível, é capaz de gerar programas extremamente úteis em tempo de
+        execução.
+    </p>
+
+    <strong>
+        <p style="font-size: 20px" id="410">&ensp;4.10. C++</p>
+    </strong>
+
+    <figure><img src="https://www.alura.com.br/artigos/assets/formacao-linguagem-c-plus-plus/img-01.png" class="center">
+        <figcaption style="text-align: center;">Fig.12 -
+            https://www.alura.com.br/artigos/assets/formacao-linguagem-c-plus-plus/img-01.png
+        </figcaption>
+    </figure>
+
+    <p style="text-align: justify;">&emsp;Já a linguagem do C++ pode ser definida como uma versão um pouco mais
+        “turbinada” e atualizada do C, ou seja, ele oferece mais recursos e possibilidades para os profissionais da
+        área. Outro fator interessante do C++ é que ele possibilita programar de modo misto, isso significa que o
+        desenvolvedor pode escrever códigos orientados a procedimentos quanto a objetos.
+    </p>
+
+    <strong>
+        <p style="font-size: 20px" id="411">&ensp;4.11. Assembly</p>
+    </strong>
+
+    <figure><img src="https://i.pinimg.com/originals/25/a8/5d/25a85d9e5057430d82273a3c75e73014.png" class="center">
+        <figcaption style="text-align: center;">Fig.13 -
+            https://i.pinimg.com/originals/25/a8/5d/25a85d9e5057430d82273a3c75e73014.png
+        </figcaption>
+    </figure>
+
+    <p style="text-align: justify;">&emsp;Esta linguagem trabalha com atributos primários do computador e é conhecida
+        como linguagem de montagem ou código de máquina. Diferente das linguagens de programação mais avançadas, onde um
+        programa compila códigos com instruções pré-definidas. A Assembly é uma das linguagens de mais baixo nível, por
+        isso, ela é a base de todas as outras linguagens de programação. Por mais que ela seja complexa e pouco
+        autossuficiente, ela ainda é usada devido a sua alta performance e velocidade.
+    </p>
+
+    <br>
+
+    <p style="text-align: center; font-size: 35px; text-shadow: 1px 1px seashell;" id="conc"><strong>❋❋❋ Conclusão
+            ❋❋❋</strong></p>
+
+    <p style="text-align: justify;">&emsp;Nesse trabalho pode ser observado que existe um universo de possibilidades
+        para quem deseja trabalhar como desenvolvedor back-end, no entanto, esses conceitos, linguagens e sistemas podem
+        ser incluídos em uma rotina de estudos de maneira gradual. Além disso, toda linguagem de programação back-end
+        tem a sua especificidade e cada uma delas é importante.
+    </p>
+
+    <p style="text-align: justify;">&emsp;Além disso, foi visto a diferença entre os tipos de linguagens de programação
+        e seus objetivos.
+    </p>
+
+    <br>
+
+    <p style="text-align: center; font-size: 35px; text-shadow: 1px 1px seashell;" id="ref"><strong>❋❋❋ Referências
+            ❋❋❋</strong></p>
+
+    <p style="text-align: justify;">&emsp;AS 11 LINGUAGENS BACK-END MAIS USADAS PARA PROGRAMAR. Kenzie, 4 fev. 2022.
+        Disponível em: <a
+            href="https://kenzie.com.br/blog/linguagens-de-programacao-backend/" target="_blank">https://kenzie.com.br/blog/linguagens-de-programacao-backend/</a>.
+        Acesso em: 22 ago.
+        2022.
+    </p>
+
+    <p style="text-align: justify;">&emsp;FRONT-END, Back-end e Full Stack. Alura, 19 ago. 2022. Disponível em: <a
+            href="https://www.alura.com.br/artigos/o-que-e-front-end-e-back-end" target="_blank">https://www.alura.com.br/artigos/o-que-e-front-end-e-back-end</a>.
+        Acesso em: 22 ago. 2022.
+    </p>
+</body>
+
+</html>
